@@ -2,7 +2,7 @@
 cd /home/freiheit/EDDN/examples/PHP
 php Client_Simple.php | 
   grep --line-buffered 'E:D Market Connector' | 
-  grep --line-buffered FSDJump | 
+  egrep --line-buffered 'FSDJump|Location' | 
   grep --line-buffered Factions | 
   egrep --line-buffered 'Dark Echo' |
   jq --unbuffered --compact-output "[ .message.StarSystem, [.message.Factions[] | select(.Name | test(\"Dark Echo\")) | [ .Name, .Influence|tostring ] ] ]" | 
