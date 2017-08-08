@@ -99,3 +99,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# tick-finder output
+tick-finder*.txt
