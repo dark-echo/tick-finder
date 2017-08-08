@@ -1,0 +1,16 @@
+[Unit]
+Description=Tick Finder (Dark Echo)
+After=network.target
+
+[Service]
+User=freiheit
+Group=freiheit
+Type=simple
+ExecStart=/home/freiheit/tick-finder/tick-finder-de.sh
+WorkingDirectory=/home/freiheit/tick-finder
+TimeoutStopSec=20
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
